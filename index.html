@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuel's Aura Stitch & Style | Luxury Men's Tailoring</title>
+    <!-- Google Fonts for luxury fashion typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0a0a;
+            --card-bg: #141414;
+            --box-bg: #1e1e1e;
+            --accent-gold: #c5a059;
+            --accent-gold-hover: #d4af37;
+            --white: #ffffff;
+            --text-gray: #b0b0b0;
+            --border-color: #2a2a2a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* --- Header & Navigation Bar --- */
+        header {
+            background-color: var(--bg-dark);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: var(--white);
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .logo span {
+            font-size: 0.7rem;
+            display: block;
+            letter-spacing: 3px;
+            color: var(--accent-gold);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-gray);
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-gold);
+        }
+
+        .nav-btn {
+            border: 1px solid var(--accent-gold);
+            color: var(--white) !important;
+            padding: 8px 18px;
+            border-radius: 2px;
+            font-weight: 500 !important;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--accent-gold);
+            color: var(--bg-dark) !important;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            background: linear-gradient(135deg, #111 0%, #080808 100%);
+            border-bottom: 1px solid var(--border-color);
+            min-height: 520px;
+        }
+
+        .hero-content {
+            padding: 70px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #f7e6c4;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+            font-weight: 300;
+            max-width: 550px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 35px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-gold);
+            color: var(--bg-dark);
+            padding: 12px 28px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-gold-hover);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--border-color);
+            color: var(--white);
+            padding: 12px 28px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: border-color 0.3s;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-gold);
+        }
+
+        .hero-features {
+            display: flex;
+            gap: 25px;
+            font-size: 0.8rem;
+            color: var(--text-gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- Hero Image set to your uploaded photo (20510.jpg) --- */
+        .hero-image {
+            background: url('20510.jpg') center top/cover no-repeat;
+            min-height: 100%;
+        }
+
+        /* --- Collections Section --- */
+        .collections-section {
+            padding: 80px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section-header {
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+
+        .section-header p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .collection-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease;
+        }
+
+        .collection-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-gold);
+        }
+
+        .card-img-container {
+            height: 340px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            background-color: #222;
+        }
+
+        .card-info {
+            padding: 25px;
+        }
+
+        .card-info h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            color: var(--white);
+        }
+
+        .card-info p {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+        }
+
+        .card-btn {
+            display: inline-block;
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .card-btn:hover {
+            color: var(--accent-gold-hover);
+        }
+
+        /* --- Contact / Footer Section --- */
+        .footer-section {
+            background-color: var(--box-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 60px 40px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--accent-gold);
+        }
+
+        .footer-col p {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: var(--text-gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent-gold);
+        }
+
+        .whatsapp-link {
+            display: inline-block;
+            background-color: #25d366;
+            color: white !important;
+            padding: 8px 16px;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 20px;
+            font-size: 0.75rem;
+            color: var(--text-gray);
+        }
+
+        /* Responsive Design for Mobile Phones */
+        @media(max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+            .hero-image {
+                height: 350px;
+            }
+            .collections-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            nav ul {
+                display: none;
+            }
+            .hero-content {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation Bar -->
+    <header>
+        <div class="logo">
+            Nuel's Aura <span>Stitch & Style</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#bespoke">Bespoke</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="nav-btn">Book Fitting</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with your uploaded photo standing alone on the right -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">Luxury Men's Tailoring</span>
+            <h1>Timeless Elegance. Tailored for the Modern Gentleman.</h1>
+            <p>
+                Discover bespoke suiting and native luxury crafted with precision. Experience Nuel's Aura Stitch & Style — where heritage meets refined elegance, crafted for the distinguished man in Port Harcourt.
+            </p>
+            <div class="hero-btns">
+                <a href="#collections" class="btn-primary">Explore Collections</a>
+                <a href="https://wa.me/2349073229161?text=Hello%20Nuel's%20Aura,%20I%20would%20like%20to%20book%20a%20fitting." class="btn-outline" target="_blank">WhatsApp Chat</a>
+            </div>
+            <div class="hero-features">
+                <span>✓ Bespoke Tailoring</span>
+                <span>✓ Premium Fabrics</span>
+                <span>✓ Handcrafted Details</span>
+            </div>
+        </div>
+        <div class="hero-image"></div>
+    </section>
+
+    <!-- Collections Section (Cards 1, 2, and 3 kept pristine as requested) -->
+    <section id="collections" class="collections-section">
+        <div class="section-header">
+            <h2>OUR COLLECTIONS</h2>
+            <p>Curated collections crafted for your unique style</p>
+        </div>
+
+        <div class="collections-grid">
+            <!-- Card 1 -->
+            <div class="collection-card">
+                <div class="card-img-container" style="background-image: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="card-info">
+                    <h3>African Senator • Bespoke</h3>
+                    <p>Embroidered native wear. Handcrafted heritage with traditional detail.</p>
+                    <a href="https://wa.me/2349073229161?text=Hello%20Nuel's%20Aura,%20I%20am%20interested%20in%20the%20African%20Senator%20collection." class="card-btn" target="_blank">Shop Now →</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="collection-card">
+                <div class="card-img-container" style="background-image: url('https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="card-info">
+                    <h3>Wedding Suit</h3>
+                    <p>Classic tuxedo tailored for your special day.</p>
+                    <a href="https://wa.me/2349073229161?text=Hello%20Nuel's%20Aura,%20I%20am%20interested%20in%20a%20Wedding%20Suit." class="card-btn" target="_blank">Shop Now →</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="collection-card">
+                <div class="card-img-container" style="background-image: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="card-info">
+                    <h3>Foreign Suit</h3>
+                    <p>Contemporary global tailored suits for modern living.</p>
+                    <a href="https://wa.me/2349073229161?text=Hello%20Nuel's%20Aura,%20I%20am%20interested%20in%20a%20Foreign%20Suit." class="card-btn" target="_blank">Shop Now →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Contact Section -->
+    <footer id="contact" class="footer-section">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Nuel's Aura Stitch & Style</h4>
+                <p>Crafting heritage into modern luxury menswear in Port Harcourt.</p>
+                <a href="https://wa.me/2349073229161?text=Hello%20Nuel's%20Aura" class="whatsapp-link" target="_blank">💬 Chat on WhatsApp</a>
+            </div>
+            <div class="footer-col" id="about">
+                <h4>Shop Address</h4>
+                <p>No 2 Job Close, Rumuapu</p>
+                <p>Rukpokwu, Port Harcourt, Rivers State</p>
+                <p>Phone: <a href="tel:09073229161">09073229161</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <p><a href="#home">Home</a></p>
+                <p><a href="#collections">Collections</a></p>
+                <p><a href="#contact">Book Consultation</a></p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Nuel's Aura Stitch & Style. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
